@@ -1,6 +1,8 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 import java.util.ArrayList;
+import java.util.HashSet;
+
 public class Main {
     public static void main(String[] args) {
         ArrayList<Employe> listeEmployes;
@@ -33,5 +35,26 @@ public class Main {
         societe.trierEmployeParNomDepartementetGrade();
         System.out.println("Liste des employés triée par nom, département, et grade :");
         societe.displayEmploye();
+
+        //Prosit 10:
+        HashSet<Department> listeDepartments;
+        DepartmentHashSet deptHS=new DepartmentHashSet();
+
+        Department Informatique=new Department(1,"Informatique",2);
+        Department RH=new Department(2,"RH",3);
+        Department Finance=new Department(3,"Finance",3);
+
+        deptHS.ajouterDepartment(Informatique);
+        deptHS.ajouterDepartment(RH);
+        deptHS.ajouterDepartment(Finance);
+
+        deptHS.displayDepartment();
+
+        System.out.println("Recherche du departement RH : " + deptHS.rechercherDepartment(RH));
+
+
+
+
+
     }
 }
